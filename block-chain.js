@@ -4,19 +4,19 @@
 //   ).toString(36)
 
 const blockChain = (data, prev) => {
-    obj = {}
+    const obj = {};
     if(prev === undefined) {
         obj.prev = {index: 0, hash: '0'};
     } else {
-        obj.prev = prev
+        obj.prev = prev;
     }
-    obj.index = obj.prev.index + 1
-    obj.data = data
-    obj.hash = hashCode(`${obj.index}${obj.prev.hash}${JSON.stringify(obj.data)}`)
+    obj.index = obj.prev.index + 1;
+    obj.data = data;
+    obj.hash = hashCode(`${obj.index}${obj.prev.hash}${JSON.stringify(obj.data)}`);
     obj.chain = function(data) {
-        return blockChain(data, obj)
+        return blockChain(data, obj);
     }
-    return obj
+    return obj;
 }
 
 // const first = blockChain({ a: 1 });

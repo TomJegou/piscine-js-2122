@@ -7,8 +7,8 @@ const strToSet = (data) => new Set(data)
 const mapToObj = (data) => Object.fromEntries(data)
 const objToArr = (data) => Object.values(data)
 const objToMap = (data) => new Map(Object.entries(data))
-const arrToObj = (data) => ""
-const strToObj = (data) => ""
+const arrToObj = (data) => Object.assign({}, data)
+const strToObj = (data) => Object.assign({}, data)
 const superTypeOf = (data) => {
 
 }

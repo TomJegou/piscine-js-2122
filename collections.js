@@ -15,7 +15,10 @@ const superTypeOf = (data) => {
       }
       const baseType = typeof data;
       if (!["object", "function"].includes(baseType)) {
-        return baseType;
+        if(baseType == "undefined"){
+            return baseType
+        }
+        return baseType[0].toUpperCase() + baseType.slice(1);
       }
       const tag = data[Symbol.toStringTag];
       if (typeof tag === "string") {

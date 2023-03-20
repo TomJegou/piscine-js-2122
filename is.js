@@ -38,11 +38,11 @@ is.fun = function (params) {
 
 
 is.truthy = function (params) {
-    return params == true;
+    return !!params;
 }
 
 is.falsy = function (params) {
-    return params == false;
+    return !params;
 }
 
 // console.log(is.obj({}));

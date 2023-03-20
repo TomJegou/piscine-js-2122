@@ -29,7 +29,7 @@ is.arr = function (params) {
 }
 
 is.obj = function (params) {
-    return typeof(params) == "object";
+    return typeof(params) === 'object' && !is.fun(params) && !is.arr(params) && params !== null;
 }
 
 is.fun = function (params) {

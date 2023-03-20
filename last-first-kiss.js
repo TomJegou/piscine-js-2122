@@ -5,3 +5,7 @@ const first = function(t) {
 const last = function(t) {
     return t[t.length-1]
 }
+
+const kiss = function(t) {
+    return [first(t), last(t)]
+}

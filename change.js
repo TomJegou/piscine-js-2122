@@ -5,7 +5,7 @@
 //     log: console.log,
 // }
 
-const get = function(key) {
+const get = (key) => {
     return sourceObject[key];
 }
 

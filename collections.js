@@ -12,29 +12,29 @@ const strToObj = (data) => Object.assign({}, data)
 const superTypeOf = (data) => {
     if (data === null) {
         return "null";
-      }
+    }
       const baseType = typeof data;
       if (!["object", "function"].includes(baseType)) {
         if(baseType == "undefined"){
             return baseType
         }
         return baseType[0].toUpperCase() + baseType.slice(1);
-      }
+    }
       const tag = data[Symbol.toStringTag];
       if (typeof tag === "string") {
         return tag;
-      }
+    }
       if (
         baseType === "function" &&
         Function.prototype.toString.call(data).startsWith("class")
       ) {
         return "class";
-      }
+    }
       const className = data.constructor.name;
       if (typeof className === "string" && className !== "") {
         return className;
-      }
-      return baseType;
+    }
+    return baseType;
 }
 
 

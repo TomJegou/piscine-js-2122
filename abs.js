@@ -1,5 +1,5 @@
 const isPositive = function(n) {
-    return n >= 0
+    return n > 0
 }
 
 const abs = function(n) {

@@ -10,7 +10,28 @@ const objToMap = (data) => new Map(Object.entries(data))
 const arrToObj = (data) => Object.assign({}, data)
 const strToObj = (data) => Object.assign({}, data)
 const superTypeOf = (data) => {
-
+    if (data === null) {
+        return "null";
+      }
+      const baseType = typeof data;
+      if (!["object", "function"].includes(baseType)) {
+        return baseType;
+      }
+      const tag = data[Symbol.toStringTag];
+      if (typeof tag === "string") {
+        return tag;
+      }
+      if (
+        baseType === "function" &&
+        Function.prototype.toString.call(data).startsWith("class")
+      ) {
+        return "class";
+      }
+      const className = data.constructor.name;
+      if (typeof className === "string" && className !== "") {
+        return className;
+      }
+      return baseType;
 }
 
 

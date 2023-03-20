@@ -1,2 +1,2 @@
-let smalls = Number.MIN_VALUE
+let smalls = -1.7976931348623157e309
 let biggie = 1.7976931348623157e309

@@ -1,1 +1,1 @@
-const circular = {circular: this.circular}
+const circular = {circular: {...circular}};

@@ -1,4 +1,4 @@
-// const is = {}
+const is = {}
 
 is.num = function (params) {
     return typeof(params) == "number";
@@ -29,7 +29,7 @@ is.arr = function (params) {
 }
 
 is.obj = function (params) {
-    return params == Object;
+    return typeof(params) == "object";
 }
 
 is.fun = function (params) {
@@ -45,4 +45,4 @@ is.falsy = function (params) {
     return params == false;
 }
 
-// console.log(Object.create({}) == Object);
+console.log(is.obj({}));

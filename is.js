@@ -1,5 +1,3 @@
-const is = {}
-
 is.num = function (params) {
     return typeof(params) == "number";
 }
@@ -44,5 +42,3 @@ is.truthy = function (params) {
 is.falsy = function (params) {
     return params == false;
 }
-
-console.log(is.nan(NaN));

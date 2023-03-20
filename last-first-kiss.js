@@ -7,9 +7,5 @@ const last = function(t) {
 }
 
 const kiss = function(t) {
-    if (first(t) < last(t)) {
-        return [first(t), last(t)]
-    } else {
-        return [last(t), first(t)]
-    }
+    return [last(t), first(t)]
 }

@@ -3,9 +3,9 @@ const isPositive = function(n) {
 }
 
 const abs = function(n) {
-    if(!isPositive(n)){
-        return n*-1
-    } else {
+    if(isPositive(n)){
         return n
+    } else {
+        return 0 - n
     }
 }

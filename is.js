@@ -1,4 +1,4 @@
-const is = {}
+// const is = {}
 
 is.num = function (params) {
     return typeof(params) == "number";
@@ -45,4 +45,6 @@ is.falsy = function (params) {
     return params == false;
 }
 
-console.log(is.obj({}));
+// console.log(is.obj({}));
+// console.log(is.obj({ length: 10 }));
+// console.log(is.obj(Object.create(null)));

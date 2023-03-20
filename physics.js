@@ -1,18 +1,13 @@
 const getAcceleration = (obj) => {
-    const a = obj.f / obj.m;
-    if(!Number.isNaN(a)){
-        return a;
+    if(obj.hasOwnProperty('f') && obj.hasOwnProperty('m')){
+        return obj.f / obj.m
+    } else if(obj.hasOwnProperty('Δv') && obj.hasOwnProperty('Δt')) {
+        return obj.Δv / obj.Δt
+    } else if(obj.hasOwnProperty('d') && obj.hasOwnProperty('t')) {
+        return 2*obj.d / obj.t**2
     } else {
-        const a = obj.Δv / Δt;
-        if(!Number.isNaN(a)){
-            return a;
-        } else {
-            const a = 2*obj.d / obj.t^2;
-            if(!Number.isNaN(a)) {
-                return a;
-            } else {
-                return "impossible";
-            }
-        }
+        return "impossible"
     }
 }
+
+console.log(getAcceleration({}));

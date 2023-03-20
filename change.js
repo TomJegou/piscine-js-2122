@@ -12,4 +12,6 @@ const get = function(key) {
 const set = function(key, value) {
     sourceObject[key] = value;
 }
-// console.log(get('num'));
+// console.log({sourceObject});
+// console.log(set('num', 55));
+// console.log({sourceObject});

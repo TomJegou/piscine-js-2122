@@ -1,11 +1,11 @@
-// const is = {}
+const is = {}
 
 is.num = function (params) {
     return typeof(params) == "number";
 }
 
 is.nan = function (params) {
-    return typeof(params) == "number";
+    return Number.isNaN(params);
 }
 
 is.str = function (params) {
@@ -25,7 +25,7 @@ is.def = function (params) {
 }
 
 is.arr = function (params) {
-    return typeof(params) == "object";
+    return Array.isArray(params);
 }
 
 is.obj = function (params) {
@@ -44,5 +44,5 @@ is.truthy = function (params) {
 is.falsy = function (params) {
     return params == false;
 }
-    
-// console.log(is.truthy("a"));
+
+console.log(is.nan(NaN));

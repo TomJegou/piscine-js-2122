@@ -24,5 +24,3 @@ const capitalize = function(str) {
     }
     return sentence(t);
 }
-
-console.log(capitalize("sqPok fkdspofkds d"))

@@ -9,5 +9,3 @@ const getAcceleration = (obj) => {
         return "impossible"
     }
 }
-
-console.log(getAcceleration({}));

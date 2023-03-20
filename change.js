@@ -9,7 +9,7 @@ const get = function(key) {
     return sourceObject[key];
 }
 
-const set = function(key, value) {
+const set = (key, value) => {
     sourceObject[key] = value;
 }
 // console.log({sourceObject});

@@ -13,5 +13,3 @@ const add = function(arg1, arg2) {
 const sub = function(arg1, arg2) {
     return arg1 - arg2
 }
-
-console.log(more(5))

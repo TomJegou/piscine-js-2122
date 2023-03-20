@@ -29,7 +29,7 @@ is.arr = function (params) {
 }
 
 is.obj = function (params) {
-    return typeof(params) == "object";
+    return params == Object;
 }
 
 is.fun = function (params) {
@@ -45,5 +45,4 @@ is.falsy = function (params) {
     return params == false;
 }
 
-// console.log(is.obj(Object.create(null)));
-// console.log(type(Object.create(null)));
+// console.log(Object.create({}) == Object);

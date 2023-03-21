@@ -3,6 +3,9 @@ const slice = function(t, starting, ending = t.length) {
     for(let i = starting; i < ending; i++) {
         result.push(t[i]);
     }
+    if (typeof t == "string") {
+        return result.join('')
+    } 
     return result;
 }
 

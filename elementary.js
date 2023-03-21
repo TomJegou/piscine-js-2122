@@ -39,6 +39,7 @@ const divide = function(a, b) {
             isPositiv = true;
         }
         if(a < 0){
+            isPositiv = false;
             a = 0 - a;
         }
         if(b < 0){
@@ -60,9 +61,9 @@ const modulo = function(a, b) {
         return a;
     }
     if (a < 0 || b < 0){
-        isPositiv = false
+        isPositiv = true
         if (a < 0 && b < 0) {
-            isPositiv = true
+            isPositiv = false
         }
         if (a < 0) {
             a = 0 - a
@@ -78,5 +79,5 @@ const modulo = function(a, b) {
     return a;
 }
 
-console.log(1%2);
+console.log(1 % -2);
 console.log(modulo(1, -2));

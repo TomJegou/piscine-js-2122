@@ -23,7 +23,7 @@ const multiply = function(a, b) {
         result = result + a;
         count = count + 1;
     }
-    isPositiv ? result : 0 - result;
+    isPositiv ? result : result = 0 - result;
     return result
 }
 
@@ -54,7 +54,7 @@ const divide = function(a, b) {
         a = a - b;
         result = result + 1;
     }
-    isPositiv ? result : 0 - result;
+    isPositiv ? result : result = 0 - result;
     return result;
 }
 
@@ -64,5 +64,3 @@ const modulo = function(a, b) {
     }
     return a;
 }
-
-console.log(divide(21, 2))

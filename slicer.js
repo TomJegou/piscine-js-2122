@@ -19,7 +19,7 @@ const slice = function(t, starting, ending = t.length) {
     return result;
 }
 
-console.log(slice('abcdef', 2)); // 'cdef'
-console.log(slice('abcdef', -2)); // 'ef'
-console.log(slice('abcdef', 0, 2)); // 'ab'
-console.log(slice('abcdef', 0, -2)); // 'abcd'
+// console.log(slice('abcdef', 2)); // 'cdef'
+// console.log(slice('abcdef', -2)); // 'ef'
+// console.log(slice('abcdef', 0, 2)); // 'ab'
+// console.log(slice('abcdef', 0, -2)); // 'abcd'

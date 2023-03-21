@@ -1,6 +1,9 @@
-const slice = function(t, starting, ending = t.length -1) {
+const slice = function(t, starting, ending = t.length) {
     const result = [];
     for(let i = starting; i < ending; i++) {
-        result.push(t[i])
+        result.push(t[i]);
     }
+    return result;
 }
+
+console.log(slice('abcdef', 2));

@@ -3,7 +3,7 @@ const cutFirst = function(str) {
 }
 
 const cutLast  = function(str) {
-    
+    return str.slice(0, -2)
 }
 
 const cutFirstLast = function(str) {
@@ -22,4 +22,5 @@ const keepFirstLast  = function(str) {
     
 }
 
-// console.log(cutFirst("test"));
+console.log(cutFirst("test"));
+console.log(cutLast("test"));

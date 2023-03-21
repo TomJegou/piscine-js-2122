@@ -1,8 +1,5 @@
 const slice = function(t, starting, ending = t.length) {
     const result = [];
-    // if (starting == 0) {
-    //     starting = t.length -1
-    // }
     if (starting >= 0) {
         for(let i = starting; i < ending; i++) {
             result.push(t[i]);
@@ -19,6 +16,6 @@ const slice = function(t, starting, ending = t.length) {
     return result;
 }
 
-console.log(slice('abcdef', 2)); // 'cdef'
-console.log(slice('abcdef', -2)); // 'ef'
-console.log(slice('abcdef', 0, 2)) // 'ab'
+// console.log(slice('abcdef', 2)); // 'cdef'
+// console.log(slice('abcdef', -2)); // 'ef'
+// console.log(slice('abcdef', 0, 2)) // 'ab'

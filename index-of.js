@@ -35,6 +35,6 @@ const includes = function(t, value, starting = 0) {
 
 // const t = [1, 2, 3, 4];
 // console.log(indexOf(t, 2, 3));
-const t = 3;
+// const t = 3;
 // console.log(indexOf([t, 0, 0, t], t, 1));
-console.log(lastIndexOf([t, 0, 0, t], t, 2));
+// console.log(lastIndexOf([t, 0, 0, t], t, 2));

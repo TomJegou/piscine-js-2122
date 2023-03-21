@@ -59,7 +59,7 @@ const divide = function(a, b) {
 }
 
 const modulo = function(a, b) {
-    while (a > 0) {
+    while (a > b) {
         a = a - b;
     }
     return a;

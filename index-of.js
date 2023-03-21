@@ -10,12 +10,14 @@ const indexOf = function(t, value, starting = 0) {
 }
 
 const lastIndexOf = function(t, value, starting = 0) {
+    if(starting > 0) {
+        t = t.slice(starting+1)
+    }
+    console.log(t)
     let x = null;
     for(let i = 0; i < t.length; i++){
-        if(i >= starting) {
-            if(t[i] === value) {
-                x = i;
-            }
+        if(t[i] === value) {
+            x = i;
         }
     }
     if (x === null) {

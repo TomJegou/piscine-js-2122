@@ -1,5 +1,5 @@
 const cutFirst = function(str) {
-
+    return str.slice(2);
 }
 
 const cutLast  = function(str) {

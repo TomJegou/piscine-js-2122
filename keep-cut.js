@@ -21,3 +21,5 @@ const keepLast  = function(str) {
 const keepFirstLast  = function(str) {
     
 }
+
+// console.log(cutFirst("test"));

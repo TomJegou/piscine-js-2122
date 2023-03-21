@@ -19,7 +19,7 @@ const round = function(n) {
 }
 
 const ceil = function(n) {
-    result = 0;
+    let result = 0;
     if (n > 0) {
         for (let i = 0; i <= n; i++) {
             if(i === n){
@@ -40,7 +40,7 @@ const ceil = function(n) {
 }
 
 const floor = function(n) {
-    result = 0;
+    let result = 0;
     if (n > 0) {
         for (let i = 0; i <= n; i++) {
             if (i === n) {
@@ -61,16 +61,16 @@ const floor = function(n) {
 }
 
 const trunc = function(n) {
-    let result = 0
+    let result = 0;
     if (n > 0) {
         for (let i = 0; i < n; i++) {
-            result = i
+            result = i;
         }
-        return result
+        return result;
     } else {
         for (let i = 0; i > n; i--) {
-            result = i
+            result = i;
         }
-        return result
+        return result;
     }
 }

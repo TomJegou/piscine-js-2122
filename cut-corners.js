@@ -1,4 +1,7 @@
 const round = function(n) {
+    if (typeof n != "number") {
+        return n
+    }
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
         return n
     }
@@ -22,6 +25,9 @@ const round = function(n) {
 }
 
 const ceil = function(n) {
+    if (typeof n != "number") {
+        return n
+    }
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
         return n
     }
@@ -46,6 +52,9 @@ const ceil = function(n) {
 }
 
 const floor = function(n) {
+    if (typeof n != "number") {
+        return n
+    }
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
         return n
     }
@@ -70,6 +79,9 @@ const floor = function(n) {
 }
 
 const trunc = function(n) {
+    if (typeof n != "number") {
+        return n
+    }
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
         return n
     }

@@ -99,8 +99,8 @@ const trunc = function(n) {
     }
 }
 
-const testingvalue = -Number.NaN
-console.log(round(testingvalue))
-console.log(ceil(testingvalue))
-console.log(floor(testingvalue))
-console.log(trunc(testingvalue))
+// const testingvalue = -Number.NaN
+// console.log(round(testingvalue))
+// console.log(ceil(testingvalue))
+// console.log(floor(testingvalue))
+// console.log(trunc(testingvalue))

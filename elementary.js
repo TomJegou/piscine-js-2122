@@ -49,14 +49,10 @@ const divide = function(a, b) {
             b = 0 - b;
         }
     }
-    if (a > b) {
-        let result = 0;
-        while (a > 0) {
-            a = a - b;
-            result = result + 1;
-        }
-    } else {
-        return 0
+    let result = 0;
+    while (a > b) {
+        a = a - b;
+        result = result + 1;
     }
     isPositiv ? result : result = 0 - result;
     return result;
@@ -69,4 +65,4 @@ const modulo = function(a, b) {
     return a;
 }
 
-console.log(divide(34, 78))
+console.log(divide(8, 34))

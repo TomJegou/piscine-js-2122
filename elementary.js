@@ -7,14 +7,14 @@ const multiply = function(a, b) {
         isPositiv = false;
         if (a < 0 && b < 0){
             isPositiv = true;
-            a = a*-1;
-            b = b*-1;
+            a = 0 - a;
+            b = 0 - b;
         }
         if(a < 0){
-            a = a *-1;
+            a = 0 - a;
         }
         if(b < 0){
-            b = b *-1;
+            b = 0 - b;
         }
     }
     let result = a;
@@ -23,7 +23,7 @@ const multiply = function(a, b) {
         result = result + a;
         count = count + 1;
     }
-    isPositiv ? result : result*-1;
+    isPositiv ? result : 0 - result;
     return result
 }
 
@@ -39,14 +39,14 @@ const divide = function(a, b) {
         isPositiv = false;
         if (a < 0 && b < 0){
             isPositiv = true;
-            a = a*-1;
-            b = b*-1;
+            a = 0 - a;
+            b = 0 - b;
         }
         if(a < 0){
-            a = a *-1;
+            a = 0 - a;
         }
         if(b < 0){
-            b = b *-1;
+            b = 0 - b;
         }
     }
     let result = 0;
@@ -54,7 +54,7 @@ const divide = function(a, b) {
         a = a - b;
         result = result + 1;
     }
-    isPositiv ? result : result*-1;
+    isPositiv ? result : 0 - result;
     return result;
 }
 

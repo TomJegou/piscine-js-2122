@@ -1,6 +1,6 @@
 const indexOf = function(t, value, starting = 0) {
-    for(let i = starting; i < t.length; i++){
-        if(t[i] === value) {
+    for(let i = 0; i < t.length; i++){
+        if(t[starting + i] === value) {
             return i;
         }
     }
@@ -9,8 +9,8 @@ const indexOf = function(t, value, starting = 0) {
 
 const lastIndexOf = function(t, value, starting = 0) {
     let x = null;
-    for(let i = starting; i < t.length; i++){
-        if(t[i] === value) {
+    for(let i = 0; i < t.length; i++){
+        if(t[starting + i] === value) {
             x = i;
         }
     }
@@ -21,8 +21,8 @@ const lastIndexOf = function(t, value, starting = 0) {
 }
 
 const includes = function(t, value, starting = 0) {
-    for(let i = starting; i < t.length; i++){
-        if(t[i] === value) {
+    for(let i = 0; i < t.length; i++){
+        if(t[starting + i] === value) {
             return true;
         }
     }

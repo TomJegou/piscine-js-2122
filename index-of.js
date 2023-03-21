@@ -11,9 +11,11 @@ const indexOf = function(t, value, starting = 0) {
 
 const lastIndexOf = function(t, value, starting = 0) {
     let x = null;
-    for(let i = starting; i < t.length; i++){
-        if(t[i] === value) {
-            x = i;
+    for(let i = 0; i < t.length; i++){
+        if(i > starting) {
+            if(t[i] === value) {
+                x = i;
+            }
         }
     }
     if (x === null) {

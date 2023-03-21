@@ -59,10 +59,11 @@ const divide = function(a, b) {
 }
 
 const modulo = function(a, b) {
+    if(b === 0) {
+        return a;
+    }
     while (a > b) {
         a = a - b;
     }
     return a;
 }
-
-console.log(divide(8, 34))

@@ -1,5 +1,5 @@
 const round = function(n) {
-    if (n == Infinity || n == -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }
     let x = 0;
@@ -22,7 +22,7 @@ const round = function(n) {
 }
 
 const ceil = function(n) {
-    if (n == Infinity || n == -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }
     let result = 0;
@@ -46,7 +46,7 @@ const ceil = function(n) {
 }
 
 const floor = function(n) {
-    if (n == Infinity || n == -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }
     let result = 0;
@@ -70,7 +70,7 @@ const floor = function(n) {
 }
 
 const trunc = function(n) {
-    if (n == Infinity || n == -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }
     let result = 0;
@@ -87,7 +87,7 @@ const trunc = function(n) {
     }
 }
 
-// const testingvalue = Number.MAX_VALUE
+// const testingvalue = Number.MAX_SAFE_INTEGER
 // console.log(round(testingvalue))
 // console.log(ceil(testingvalue))
 // console.log(floor(testingvalue))

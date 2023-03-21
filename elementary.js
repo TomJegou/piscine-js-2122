@@ -1,4 +1,7 @@
 const multiply = function(a, b) {
+    if (a === 0 && b === 0){
+        return 0
+    }
     let result = a;
     let count = 1;
     while (count < b) {

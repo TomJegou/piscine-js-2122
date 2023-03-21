@@ -1,7 +1,9 @@
 const indexOf = function(t, value, starting = 0) {
     for(let i = 0; i < t.length; i++){
-        if(t[starting + i] === value) {
-            return i;
+        if (i >= starting) {
+            if(t[i] === value) {
+                return i;
+            }
         }
     }
     return -1;
@@ -10,8 +12,10 @@ const indexOf = function(t, value, starting = 0) {
 const lastIndexOf = function(t, value, starting = 0) {
     let x = null;
     for(let i = 0; i < t.length; i++){
-        if(t[starting + i] === value) {
-            x = i;
+        if(i >= starting) {
+            if(t[i] === value) {
+                x = i;
+            }
         }
     }
     if (x === null) {
@@ -22,8 +26,10 @@ const lastIndexOf = function(t, value, starting = 0) {
 
 const includes = function(t, value, starting = 0) {
     for(let i = 0; i < t.length; i++){
-        if(t[starting + i] === value) {
-            return true;
+        if(i >= starting) {
+            if(t[i] === value) {
+                return true;
+            }
         }
     }
     return false;
@@ -31,3 +37,5 @@ const includes = function(t, value, starting = 0) {
 
 // const t = [1, 2, 3, 4];
 // console.log(indexOf(t, 2, 3));
+const t = 3;
+console.log(indexOf([t, 0, 0, t], t, 1));

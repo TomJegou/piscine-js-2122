@@ -74,9 +74,3 @@ const trunc = function(n) {
         return result
     }
 }
-
-console.log(trunc(13.37))
-console.log(trunc(42.84))
-console.log(trunc(0.123))
-console.log(trunc(-0.123))
-console.log(trunc(0.123))

@@ -29,7 +29,7 @@ const ceil = function(n) {
         }
         result++;
     } else {
-        for (let i = 0; i > n; i--) {
+        for (let i = 0; i >= n; i--) {
             if(i === n) {
                 return i;
             }

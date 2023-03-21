@@ -13,7 +13,6 @@ const lastIndexOf = function(t, value, starting = 0) {
     if(starting > 0) {
         t = t.slice(starting+1)
     }
-    console.log(t)
     let x = null;
     for(let i = 0; i < t.length; i++){
         if(t[i] === value) {
@@ -44,3 +43,4 @@ const includes = function(t, value, starting = 0) {
 // console.log(indexOf([t, 0, 0, t], t, 1));
 // console.log(lastIndexOf([t, 0, 0, t], t, 2));
 // console.log(lastIndexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2));
+console.log(lastIndexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2));

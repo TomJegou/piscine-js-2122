@@ -40,7 +40,24 @@ const ceil = function(n) {
 }
 
 const floor = function(n) {
-    
+    result = 0;
+    if (n > 0) {
+        for (let i = 0; i <= n; i++){
+            if (i === n) {
+                return i
+            }
+            result = i
+        }
+    } else {
+        for (let i = 0; i >= n; i--){
+            if (i === n) {
+                return i
+            }
+            result = i
+        }
+        result--
+    }
+    return result
 }
 
 const trunc = function(n) {

@@ -78,6 +78,3 @@ const modulo = function(a, b) {
     isPositiv ? a : a = 0 - a;
     return a;
 }
-
-console.log(1 % -2);
-console.log(modulo(1, -2));

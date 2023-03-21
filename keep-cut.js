@@ -20,7 +20,7 @@ const keepLast  = function(str) {
 }
 
 const keepFirstLast  = function(str) {
-    return keepFirst(str) + keepLast(str)
+    return keepFirst(str) + keepLast(cutFirst(str))
 }
 
 // console.log(cutFirst("testan"));
@@ -28,3 +28,5 @@ const keepFirstLast  = function(str) {
 // console.log(keepFirst("testab"));
 // console.log(keepLast("testab"));
 // console.log(keepFirstLast('abcdef') === 'abef');
+// console.log(keepFirstLast('af'))
+// console.log(keepFirstLast('af') === 'af')

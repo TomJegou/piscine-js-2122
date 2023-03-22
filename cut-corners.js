@@ -70,7 +70,6 @@ const floor = function(n) {
 }
 
 const trunc = function(n) {
-    console.log(n)
     if (n === Infinity || n === -Infinity || n >= 0xfffffffff || n <= 0xfffffffff) {
         return n
     }

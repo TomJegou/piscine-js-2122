@@ -1,5 +1,5 @@
 const round = function(n) {
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= 0xfffffffff || n <= 0xfffffffff) {
         return n
     }
     let x = 0;
@@ -22,7 +22,7 @@ const round = function(n) {
 }
 
 const ceil = function(n) {
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= 0xfffffffff || n <= 0xfffffffff) {
         return n
     }
     let result = 0;
@@ -46,7 +46,7 @@ const ceil = function(n) {
 }
 
 const floor = function(n) {
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= 0xfffffffff || n <= 0xfffffffff) {
         return n
     }
     let result = 0;
@@ -71,7 +71,7 @@ const floor = function(n) {
 
 const trunc = function(n) {
     console.log(n)
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+    if (n === Infinity || n === -Infinity || n >= 0xfffffffff || n <= 0xfffffffff) {
         return n
     }
     let result = 0;
@@ -88,10 +88,9 @@ const trunc = function(n) {
     }
 }
 
-// const testingvalue = 0xfffffffff
-// console.log(round(testingvalue))
-// console.log(ceil(testingvalue))
-// console.log(floor(testingvalue))
-// console.log(trunc(testingvalue))
-// console.log(Math.trunc(testingvalue));
-// console.log(testingvalue)
+const testingvalue = 0xfffffffff + 2.5
+console.log(round(testingvalue))
+console.log(ceil(testingvalue))
+console.log(floor(testingvalue))
+console.log(trunc(testingvalue))
+console.log(Math.trunc(testingvalue));

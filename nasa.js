@@ -1,4 +1,4 @@
-const nasa = function(n, result = '', start = 0) {
+const nasa = function(n, result = '', start = 1) {
     if(start == n + 1) {
         return result
     }

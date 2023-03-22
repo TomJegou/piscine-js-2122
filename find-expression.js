@@ -1,22 +1,24 @@
 // const add4 = '+4'
 // const mul2 = '*2'
 
-const findExpression = function(number, string = '1') {
+const findExpression = function(number, string = '1', n = 1) {
     // console.log(string)
-    if (number === 0) {
+    if (n === number) {
         return string
     }
-    if (number - 4 == 0) {
+    if (n + 4 == number) {
         const t = `${string} ${add4}`
-        number -= 4
-        return findExpression(number, t)
+        n += 4
+        return findExpression(number, t, n)
     } else {
-        if (number %2 == 0) {
-            const x = `${string} ${mul2}`
-            number /= 2
-            return findExpression(number, x)
+        if (n * 2 <= number) {
+            const t = `${string} ${mul2}`
+            n *= 2
+            return findExpression(number, t, n)
         } else {
             return undefined
         }
     }
 }
+
+// console.log(findExpression(8))

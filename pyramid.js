@@ -12,5 +12,5 @@ function pyramid(str, num) {
     return result.replace(/\n /g, "\n");
 }
 
-console.log(pyramid("a", 5));
-console.log(JSON.stringify(pyramid("a", 5)));
+// console.log(pyramid("a", 5));
+// console.log(JSON.stringify(pyramid("a", 5)));

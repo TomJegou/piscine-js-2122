@@ -70,6 +70,7 @@ const floor = function(n) {
 }
 
 const trunc = function(n) {
+    console.log(n)
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }

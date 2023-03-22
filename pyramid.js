@@ -6,7 +6,7 @@ function pyramid(str, num) {
         row += str;
       }
       let spaces = " ".repeat(num - i);
-      result += spaces + row.trimRight() + spaces;
+      result += spaces + row.trimEnd() + spaces;
       if (i !== num) {
         result += "\n";
       }

@@ -1,7 +1,4 @@
 const round = function(n) {
-    // if (typeof n != "number") {
-    //     return n
-    // }
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
         return n
     }
@@ -25,9 +22,6 @@ const round = function(n) {
 }
 
 const ceil = function(n) {
-    // if (typeof n != "number") {
-    //     return n
-    // }
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
         return n
     }
@@ -52,9 +46,6 @@ const ceil = function(n) {
 }
 
 const floor = function(n) {
-    // if (typeof n != "number") {
-    //     return n
-    // }
     if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
         return n
     }
@@ -79,28 +70,11 @@ const floor = function(n) {
 }
 
 const trunc = function(n) {
-    // if (typeof n != "number") {
-    //     return n
-    // }
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
-        return n
-    }
-    let result = 0;
-    if (n > 0) {
-        for (let i = 0; i < n; i++) {
-            result = i;
-        }
-        return result;
-    } else {
-        for (let i = 0; i > n; i--) {
-            result = i;
-        }
-        return result;
-    }
+    return ~~n
 }
 
-// const testingvalue = -Number.NaN
-// console.log(round(testingvalue))
-// console.log(ceil(testingvalue))
-// console.log(floor(testingvalue))
-// console.log(trunc(testingvalue))
+const testingvalue = -2147483648;
+console.log(round(testingvalue))
+console.log(ceil(testingvalue))
+console.log(floor(testingvalue))
+console.log(trunc(testingvalue))

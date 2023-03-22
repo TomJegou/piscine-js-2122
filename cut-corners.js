@@ -73,8 +73,8 @@ const trunc = function(n) {
     return ~~n
 }
 
-const testingvalue = -2147483648;
-console.log(round(testingvalue))
-console.log(ceil(testingvalue))
-console.log(floor(testingvalue))
-console.log(trunc(testingvalue))
+// const testingvalue = -2147483648;
+// console.log(round(testingvalue))
+// console.log(ceil(testingvalue))
+// console.log(floor(testingvalue))
+// console.log(trunc(testingvalue))

@@ -2,7 +2,9 @@ const split = function(str, pattern = '') {
     let word = ''
     const result = []
     if (pattern == '') {
-        result.push(str)
+        for (let i = 0; i < str.length; i++) {
+            result.push(str[i])
+        } 
         return result
     }
     for (let i = 0; i < str.length; i++) {
@@ -42,3 +44,4 @@ const join = function(t, sep = ',') {
 
 // console.log(console.table(split("Je m'appelle Henri", " ")))
 // console.log(join(split("Je m'appelle Henri", " ")))
+console.log(split('Riad', ''))

@@ -11,3 +11,5 @@ function pyramid(str, num) {
 
 // console.log(pyramid("a", 5));
 // console.log(JSON.stringify(pyramid("a", 5)));
+// console.log(pyramid('{}', 12));
+// console.log(JSON.stringify(pyramid('{}', 12)));

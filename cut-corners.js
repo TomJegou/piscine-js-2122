@@ -1,5 +1,8 @@
 const round = function(n) {
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
+    if(n <= -2147483649 || n >= 2147483648) {
+        return 0
+    }
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }
     let x = 0;
@@ -22,7 +25,10 @@ const round = function(n) {
 }
 
 const ceil = function(n) {
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
+    if(n <= -2147483649 || n >= 2147483648) {
+        return 0
+    }
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }
     let result = 0;
@@ -46,7 +52,10 @@ const ceil = function(n) {
 }
 
 const floor = function(n) {
-    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER || n > 1000) {
+    if(n <= -2147483649 || n >= 2147483648) {
+        return 0
+    }
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
         return n
     }
     let result = 0;
@@ -69,22 +78,31 @@ const floor = function(n) {
     return result
 }
 
-function trunc(n) {
-    let ost
-    let res
-    ost = n % 1
-    if (n > 0 && ost != 0) {
-        return res = n - ost
-    } else {
-        let x
-        x = 1 + ost
-        return res = n - ost
+const trunc = function(n) {
+    if(n <= -2147483649 || n >= 2147483648) {
+        return 0
     }
-    return n
+    if (n === Infinity || n === -Infinity || n >= Number.MAX_SAFE_INTEGER || n <= Number.MIN_SAFE_INTEGER) {
+        return n
+    }
+    let result = 0;
+    if (n > 0) {
+        for (let i = 0; i < n; i++) {
+            result = i;
+        }
+        return result;
+    } else {
+        for (let i = 0; i > n; i--) {
+            result = i;
+        }
+        return result;
+    }
 }
 
-// const testingvalue = -2147483648;
-// console.log(round(testingvalue))
-// console.log(ceil(testingvalue))
-// console.log(floor(testingvalue))
-// console.log(trunc(testingvalue))
+const testingvalue = 0xfffffffff + 2147483648
+console.log(round(testingvalue))
+console.log(ceil(testingvalue))
+console.log(floor(testingvalue))
+console.log(trunc(testingvalue))
+console.log(Math.trunc(testingvalue));
+console.log(testingvalue)

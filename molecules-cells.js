@@ -7,7 +7,7 @@ const RNA = function(str) {
     }
     let result = ''
     for(const t of str) {
-        result += dic[t.toUpperCase]
+        result += dic[t.toUpperCase()]
     }
     return result
 }
@@ -21,7 +21,7 @@ const DNA = function(str) {
     }
     let result = ''
     for(const t of str) {
-        result += dic[t.toUpperCase]
+        result += dic[t.toUpperCase()]
     }
     return result
 }

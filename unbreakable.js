@@ -15,6 +15,7 @@ const split = function(str, pattern = '') {
         }
         if (isPattern) {
             // if (word != '') {
+            //     result.push(word)
             // }
             result.push(word)
             word = ''

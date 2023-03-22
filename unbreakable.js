@@ -14,9 +14,9 @@ const split = function(str, pattern = '') {
             }
         }
         if (isPattern) {
-            if (word != '') {
-                result.push(word)
-            }
+            // if (word != '') {
+            // }
+            result.push(word)
             word = ''
             i+= pattern.length - 1
         } else {

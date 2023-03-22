@@ -44,4 +44,4 @@ const join = function(t, sep = ',') {
 
 // console.log(console.table(split("Je m'appelle Henri", " ")))
 // console.log(join(split("Je m'appelle Henri", " ")))
-console.log(split('Riad', ''))
+// console.log(split('Riad', ''))

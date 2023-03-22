@@ -14,9 +14,11 @@ const split = function(str, pattern = '') {
             }
         }
         if (isPattern) {
-            result.push(word)
+            if (word != '') {
+                result.push(word)
+            }
             word = ''
-            i+= pattern.length
+            i+= pattern.length - 1
         } else {
             word += str[i]
         }
@@ -25,8 +27,17 @@ const split = function(str, pattern = '') {
     return result
 }
 
-const join = function(t) {
-
+const join = function(t, sep = ',') {
+    let result = ''
+    for (let i = 0; i < t.length; i++) {
+        if (i === t.length -1) {
+            result += t[i]
+        } else {
+            result += `${t[i]}${sep}`
+        }
+    }
+    return result
 }
 
-console.log(console.table(split("dpsifjpdsifjdspifudsp< fpodsfpdsfk,slfsdkfposd", " ")))
+// console.log(console.table(split("Je m'appelle Henri", " ")))
+// console.log(join(split("Je m'appelle Henri", " ")))

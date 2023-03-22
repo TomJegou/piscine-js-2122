@@ -102,10 +102,10 @@ const trunc = function(n) {
     }
 }
 
-const testingvalue = 0xfffffffff
-console.log(round(testingvalue))
-console.log(ceil(testingvalue))
-console.log(floor(testingvalue))
-console.log(trunc(testingvalue))
-console.log(Math.trunc(testingvalue));
-console.log(testingvalue)
+// const testingvalue = 0xfffffffff
+// console.log(round(testingvalue))
+// console.log(ceil(testingvalue))
+// console.log(floor(testingvalue))
+// console.log(trunc(testingvalue))
+// console.log(Math.trunc(testingvalue));
+// console.log(testingvalue)

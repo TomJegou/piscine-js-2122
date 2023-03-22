@@ -69,8 +69,18 @@ const floor = function(n) {
     return result
 }
 
-const trunc = function(n) {
-    return ~~n
+function trunc(n) {
+    let ost
+    let res
+    ost = n % 1
+    if (n > 0 && ost != 0) {
+        return res = n - ost
+    } else {
+        let x
+        x = 1 + ost
+        return res = n - ost
+    }
+    return n
 }
 
 // const testingvalue = -2147483648;

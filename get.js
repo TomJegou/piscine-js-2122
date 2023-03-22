@@ -1,10 +1,15 @@
 const get = function(src, path) {
-    const keys = path.split('.')
-    for (const key of keys) {
-        if (Object.keys(src).includes(key)) {
-            src = src[key]
+    let keys = path.split('.')
+    while (keys.length > 0) {
+        const key = keys[0]
+        if (typeof src == "string") {
+            return `${src}.${keys.join('.')}`
         } else {
-            return undefined
+            src = src[key]
+            if(src === undefined) {
+                return src
+            }
+            keys = keys.slice(1)
         }
     }
     return src
@@ -16,3 +21,4 @@ const get = function(src, path) {
 
 // console.log(get({ nested: { key: 'value' } }, 'nx.nx'))
 // console.log(get({ nested: { key: 'value' } }, 'nx.nx') === undefined)
+// console.log(get({ "a": [{ "b": "t" }] }, 'a.0.b.toString'))

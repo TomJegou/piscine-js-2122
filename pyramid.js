@@ -6,8 +6,11 @@ function pyramid(str, num) {
             row += str;
         }
         let spaces = " ".repeat(num - i);
-        let lineEnding = i === num ? "" : "\n";
-        result += spaces + row.trimEnd() + spaces + lineEnding;
+        let lineEnding = i === num ? "" : "\n ";
+        result += spaces + row.trimEnd()+ lineEnding;
     }
-    return result;
+    return result.replace(/\n /g, "\n");
 }
+
+console.log(pyramid("a", 5));
+console.log(JSON.stringify(pyramid("a", 5)));

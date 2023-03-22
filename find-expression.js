@@ -2,7 +2,7 @@
 // const mul2 = '*2'
 
 const findExpression = function(number, string = '1', n = 1) {
-    console.log(string)
+    // console.log(string)
     if (n === number) {
         return string
     }

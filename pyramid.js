@@ -7,7 +7,7 @@ function pyramid(str, num) {
       }
     }
     return result;
-  }
+}
 
 // console.log(pyramid("a", 5));
 // console.log(JSON.stringify(pyramid("a", 5)));

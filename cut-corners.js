@@ -2,6 +2,9 @@ const round = function(n) {
     if (n === Infinity || n === -Infinity) {
         return n
     }
+    if (n >= 0xfffffffff) {
+        return 0xfffffffff + trunc(n-0xfffffffff)
+    }
     let x = 0;
     let y = 0;
     let result = 0;
@@ -24,6 +27,9 @@ const round = function(n) {
 const ceil = function(n) {
     if (n === Infinity || n === -Infinity) {
         return n
+    }
+    if (n >= 0xfffffffff) {
+        return 0xfffffffff + trunc(n-0xfffffffff)
     }
     let result = 0;
     if (n > 0) {
@@ -49,6 +55,9 @@ const floor = function(n) {
     if (n === Infinity || n === -Infinity) {
         return n
     }
+    if (n >= 0xfffffffff) {
+        return 0xfffffffff + trunc(n-0xfffffffff)
+    }
     let result = 0;
     if (n > 0) {
         for (let i = 0; i <= n; i++) {
@@ -72,6 +81,9 @@ const floor = function(n) {
 const trunc = function(n) {
     if (n === Infinity || n === -Infinity) {
         return n
+    }
+    if (n >= 0xfffffffff) {
+        return 0xfffffffff + trunc(n-0xfffffffff)
     }
     let result = 0;
     if (n > 0) {

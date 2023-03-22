@@ -79,6 +79,9 @@ const floor = function(n) {
 }
 
 const trunc = function(n) {
+    if (n >= 0xfffffffff) {
+        return n
+    }
     if(n <= -2147483649 || n >= 2147483648) {
         return n
     }
@@ -99,10 +102,9 @@ const trunc = function(n) {
     }
 }
 
-// const testingvalue = 0xfffffffff + 2147483648
-// console.log(round(testingvalue))
-// console.log(ceil(testingvalue))
-// console.log(floor(testingvalue))
-// console.log(trunc(testingvalue))
-// console.log(Math.trunc(testingvalue));
-// console.log(testingvalue)
+console.log(round(testingvalue))
+console.log(ceil(testingvalue))
+console.log(floor(testingvalue))
+console.log(trunc(testingvalue))
+console.log(Math.trunc(testingvalue));
+console.log(testingvalue)

@@ -1,6 +1,7 @@
 const letterSpaceNumber = function(str) {
     const regexp = new RegExp('(\\D\\s\\d\\D)', 'g')
     const result = []
+    let m
     while ((m = regexp.exec(str)) !== null) {
         if (m.index === regexp.lastIndex) {
             regexp.lastIndex++

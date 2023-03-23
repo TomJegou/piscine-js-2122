@@ -10,5 +10,5 @@ const letterSpaceNumber = function(str) {
     return result
 }
 
-console.log(letterSpaceNumber("example 1, example 20"))
-console.log(letterSpaceNumber('He is 8 or 9 years old, not 10.'))
+// console.log(letterSpaceNumber("example 1, example 20"))
+// console.log(letterSpaceNumber('He is 8 or 9 years old, not 10.'))

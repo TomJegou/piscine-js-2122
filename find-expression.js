@@ -6,19 +6,9 @@ const findExpression = function(number, string = '1', n = 1) {
     if (n === number) {
         return string
     }
-    if (n + 4 == number) {
-        const t = `${string} ${add4}`
-        n += 4
-        return findExpression(number, t, n)
-    } else {
-        if (n * 2 <= number) {
-            const t = `${string} ${mul2}`
-            n *= 2
-            return findExpression(number, t, n)
-        } else {
-            return undefined
-        }
-    }
+    findExpression(number, `${string} ${add4}`, n + 4)
+    findExpression(number, `${string} ${mul2}`, n * 2)
 }
 
 // console.log(findExpression(8))
+// console.log(findExpression(14))

@@ -1,6 +1,6 @@
 const letterSpaceNumber = function(str) {
     const regexp = new RegExp('(\\D\\s\\d\\D)', 'g')
-    result = []
+    const result = []
     while ((m = regexp.exec(str)) !== null) {
         if (m.index === regexp.lastIndex) {
             regexp.lastIndex++
@@ -10,4 +10,5 @@ const letterSpaceNumber = function(str) {
     return result
 }
 
-// console.log(letterSpaceNumber("example 1, example 20"))
+console.log(letterSpaceNumber("example 1, example 20"))
+console.log(letterSpaceNumber('He is 8 or 9 years old, not 10.'))

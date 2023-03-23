@@ -1,5 +1,5 @@
 const letterSpaceNumber = function(str) {
-    const regexp = new RegExp('(\\D\\s\\d\\D)', 'g')
+    const regexp = new RegExp('(\\D\\s\\d\\W)', 'g')
     const result = []
     let m
     while ((m = regexp.exec(str)) !== null) {

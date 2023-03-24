@@ -1,6 +1,6 @@
+import { isValid } from 'date-fns'
 
 const isValid = function(date) {
-    let isValid = require('date-fns/isValid')
     return isValid(date)
 }
 

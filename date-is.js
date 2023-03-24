@@ -1,5 +1,7 @@
+var isValid = require('date-fns/isValid')
+
 const isValid = function(date) {
-    return date.valueOf() === NaN
+    return isValid(date)
 }
 
 const isAfter = function(date1, date2){

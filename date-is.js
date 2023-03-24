@@ -1,6 +1,6 @@
-var isValid = require('date-fns/isValid')
 
 const isValid = function(date) {
+    let isValid = require('date-fns/isValid')
     return isValid(date)
 }
 

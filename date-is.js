@@ -1,8 +1,6 @@
 const isValid = function(date) {
     try {
-        date.valueOf()
-        console.log("Valid date")
-        return true
+        return !isNaN(date.getTime())
     } catch {
         return false
     }
@@ -26,8 +24,9 @@ const isPast = function(date) {
 
 // const d = new Date(NaN)
 // const a = new Date()
-// console.log(typeof d.getTime())
-// console.log(typeof a.getTime())
+// // console.log(isNaN(d.valueOf()))
 // console.log(isValid(new Date()))
 // console.log(isValid(d))
-// console.log(isValid("fsdfsd"))
+// console.log(isValid(""))
+// console.log(isValid(new Date('December 17, 1995 03:24:00')))
+// console.log(isValid('2013-01-01'))

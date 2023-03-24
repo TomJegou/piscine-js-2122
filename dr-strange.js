@@ -8,11 +8,15 @@ const addWeek = function (date) {
         5: "Friday",
         6: "Saturday",
         7: "Sunday",
+        0: "Sunday",
+    }
+    if ((date.getTime()/1000/3600/24-source)%14 === 0) {
+        return `second${days[0]}`
     }
     if ((date.getTime()/1000/3600/24-source)%14 > 7){
-        return `second${days[date.getUTCDay()]}`
+        return `second${days[(date.getTime()/1000/3600/24-source)%14 - 7]}`
     }
-    return days[date.getUTCDay()]
+    return days[(date.getTime()/1000/3600/24-source)%14]
 }
 
 const timeTravel = function({ date, hour, minute, second }) {

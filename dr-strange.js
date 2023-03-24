@@ -1,21 +1,21 @@
 const addWeek = function (date) {
     const days = [
-        "Sunday",
         "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday",
         "Saturday",
-        "secondSunday",
+        "Sunday",
         "secondMonday",
         "secondTuesday",
         "secondWednesday",
         "secondThursday",
         "secondFriday",
-        "secondSaturday"
+        "secondSaturday",
+        "secondSunday",
     ]
-    return days[date.getDate()]
+    return days[date.getDate() - 1]
 }
 
 const timeTravel = function({ date, hour, minute, second }) {
@@ -35,3 +35,5 @@ const timeTravel = function({ date, hour, minute, second }) {
 //     minute: 22,
 //     second: 22,
 //   }).toString())
+
+// console.log(addWeek(new Date('0001-01-01')))

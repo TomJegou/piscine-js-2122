@@ -33,4 +33,4 @@ const timeTravel = function({ date, hour, minute, second }) {
 //   }).toString())
 
 // console.log(addWeek(new Date('0001-01-01')))
-console.log(addWeek(new Date('2025-08-11')))
+// console.log(addWeek(new Date('2025-08-11')))

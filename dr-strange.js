@@ -11,7 +11,7 @@ const addWeek = function (date) {
     if (date.getDate() > 7){
         return `second${days[date.getDay() -1]}`
     }
-    return days[date.getDay() -1]
+    return days[date.getDate() -1]
 }
 
 const timeTravel = function({ date, hour, minute, second }) {
@@ -34,3 +34,4 @@ const timeTravel = function({ date, hour, minute, second }) {
 
 // console.log(addWeek(new Date('0001-01-01')))
 // console.log(addWeek(new Date('2025-08-11')))
+console.log(addWeek(new Date('0001-01-07')))

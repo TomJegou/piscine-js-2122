@@ -7,7 +7,22 @@ const citiesOnly = function(t){
 }
 
 const upperCasingStates = function(t){
+    const result = [] 
     t.map((city) =>{
-        city[0].toUpperCase()
+        result.push(city[0].toUpperCase() + city.slice(1))
     })
+    return result
 }
+
+console.log(citiesOnly([
+    {
+      city: 'Los Angeles',
+      temperature: '  101 °F   ',
+    },
+    {
+      city: 'San Francisco',
+      temperature: ' 84 ° F   ',
+    },
+  ]))
+
+console.log(upperCasingStates(['alabama', 'new jersey']))

@@ -9,7 +9,15 @@ const citiesOnly = function(t){
 const upperCasingStates = function(t){
     const result = [] 
     t.map((city) =>{
-        result.push(city[0].toUpperCase() + city.slice(1))
+        let str = ""
+        tmp = city.split(" ")
+        tmp.map((word, index) =>{
+            str += word[0].toUpperCase() + word.slice(1)
+            if (index !==  tmp.length -1) {
+                str += " "
+            }
+        })
+        result.push(str)
     })
     return result
 }
@@ -42,6 +50,6 @@ const tempForecasts = function() {
 //     },
 //   ]))
 
-// console.log(upperCasingStates(['alabama', 'new jersey']))
+console.log(upperCasingStates(['alabama', 'new jersey']))
 
 // console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F']))

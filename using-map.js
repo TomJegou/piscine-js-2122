@@ -23,18 +23,18 @@ const trimTemp = function (t) {
 }
 
 const tempForecasts = function() {
-    
+
 }
 
-console.log(citiesOnly([
-    {
-      city: 'Los Angeles',
-      temperature: '  101 °F   ',
-    },
-    {
-      city: 'San Francisco',
-      temperature: ' 84 ° F   ',
-    },
-  ]))
+// console.log(citiesOnly([
+//     {
+//       city: 'Los Angeles',
+//       temperature: '  101 °F   ',
+//     },
+//     {
+//       city: 'San Francisco',
+//       temperature: ' 84 ° F   ',
+//     },
+//   ]))
 
-console.log(upperCasingStates(['alabama', 'new jersey']))
+// console.log(upperCasingStates(['alabama', 'new jersey']))

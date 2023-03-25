@@ -38,8 +38,12 @@ const trimTemp = function (t) {
     return t
 }
 
-const tempForecasts = function() {
-
+const tempForecasts = function(t) {
+    const result = []
+    t.map((obj, index) => {
+        result.push(`${fahrenheitToCelsius([trimTemp(t)[index].temperature])[0]}elsius in ${citiesOnly(t)[index]}, ${upperCasingStates([obj.state])}`)
+    })
+    return result
 }
 
 // console.log(citiesOnly([
@@ -57,7 +61,16 @@ const tempForecasts = function() {
 
 // console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F', '-2°F']))
 
-console.log(trimTemp([
-    { city: 'Los Angeles', temperature: '  101 °F   ' },
-    { city: 'San Francisco', temperature: ' 84 ° F   ' },
-  ]))
+// console.log(trimTemp([
+//     { city: 'Los Angeles', temperature: '  101 °F   ' },
+//     { city: 'San Francisco', temperature: ' 84 ° F   ' },
+// ]))
+
+// console.log(tempForecasts([
+//     {
+//       city: 'Pasadena',
+//       temperature: ' 101 °F',
+//       state: 'california',
+//       region: 'West',
+//     },
+//   ]))

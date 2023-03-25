@@ -7,7 +7,11 @@ const isValid = function(date) {
 }
 
 const isAfter = function(date1, date2){
-    return date1.getTime() > date2.getTime()
+    if (isValid(date1) && isValid(date2)) {
+        return date1.getTime() > date2.getTime()
+    } else {
+        return false
+    }
 }
 
 const isBefore = function(date1, date2) {

@@ -10,7 +10,7 @@ const upperCasingStates = function(t){
     const result = [] 
     t.map((city) =>{
         let str = ""
-        tmp = city.split(" ")
+        const tmp = city.split(" ")
         tmp.map((word, index) =>{
             str += word[0].toUpperCase() + word.slice(1)
             if (index !==  tmp.length -1) {
@@ -50,6 +50,6 @@ const tempForecasts = function() {
 //     },
 //   ]))
 
-console.log(upperCasingStates(['alabama', 'new jersey']))
+// console.log(upperCasingStates(['alabama', 'new jersey']))
 
 // console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F']))

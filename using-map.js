@@ -33,8 +33,7 @@ const fahrenheitToCelsius = function(t) {
 
 const trimTemp = function (t) {
     t.map((obj) => {
-        obj.temperature = obj.temperature.trimEnd()
-        obj.temperature = obj.temperature.trimStart()
+        obj.temperature = obj.temperature.split(" ").join('')
     })
     return t
 }
@@ -58,7 +57,7 @@ const tempForecasts = function() {
 
 // console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F', '-2°F']))
 
-// console.log(trimTemp([
-//     { city: 'Los Angeles', temperature: '  101 °F   ' },
-//     { city: 'San Francisco', temperature: ' 84 ° F   ' },
-//   ]))
+console.log(trimTemp([
+    { city: 'Los Angeles', temperature: '  101 °F   ' },
+    { city: 'San Francisco', temperature: ' 84 ° F   ' },
+  ]))

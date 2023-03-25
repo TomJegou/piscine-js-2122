@@ -23,7 +23,7 @@ const isFuture = function(date) {
 }
 
 const isPast = function(date) {
-    return !isFuture(date)
+    return isValid(date) && !isFuture(date)
 }
 
 // const d = new Date(NaN)

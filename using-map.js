@@ -26,7 +26,7 @@ const fahrenheitToCelsius = function(t) {
     const result = []
     t.map((tmpF) =>{
         const v = tmpF.split("°")
-        result.push(`${Math.round((parseInt(v[0])-32) / 1.8)}°C`)
+        result.push(`${Math.ceil((parseInt(v[0])-32) / 1.8)}°C`)
     })
     return result
 }
@@ -52,4 +52,4 @@ const tempForecasts = function() {
 
 // console.log(upperCasingStates(['alabama', 'new jersey']))
 
-// console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F']))
+console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F', '-2°F']))

@@ -8,7 +8,7 @@ const isValid = function(date) {
 
 const isAfter = function(date1, date2){
     if (isValid(date1) && isValid(date2)) {
-        return date1.getTime() > date2.getTime()
+        return new Date(date1).getTime() > new Date(date2).getTime()
     } else {
         return false
     }
@@ -19,11 +19,11 @@ const isBefore = function(date1, date2) {
 }
 
 const isFuture = function(date) {
-    return isValid(date) && date.getTime() > new Date().getTime()
+    return isValid(date) && new(date).getTime() > new Date().getTime()
 }
 
 const isPast = function(date) {
-    return isValid(date) && date.getTime() < new Date().getTime()
+    return !isFuture(date)
 }
 
 // const d = new Date(NaN)

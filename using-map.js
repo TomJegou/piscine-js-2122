@@ -32,7 +32,11 @@ const fahrenheitToCelsius = function(t) {
 }
 
 const trimTemp = function (t) {
-
+    t.map((obj) => {
+        obj.temperature = obj.temperature.trimEnd()
+        obj.temperature = obj.temperature.trimStart()
+    })
+    return t
 }
 
 const tempForecasts = function() {
@@ -52,4 +56,9 @@ const tempForecasts = function() {
 
 // console.log(upperCasingStates(['alabama', 'new jersey']))
 
-console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F', '-2°F']))
+// console.log(fahrenheitToCelsius(['68°F', '59°F', '25°F', '-2°F']))
+
+// console.log(trimTemp([
+//     { city: 'Los Angeles', temperature: '  101 °F   ' },
+//     { city: 'San Francisco', temperature: ' 84 ° F   ' },
+//   ]))

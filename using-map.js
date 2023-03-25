@@ -7,5 +7,7 @@ const citiesOnly = function(t){
 }
 
 const upperCasingStates = function(t){
-    
+    t.map((city) =>{
+        city[0].toUpperCase()
+    })
 }

@@ -14,6 +14,18 @@ const upperCasingStates = function(t){
     return result
 }
 
+const fahrenheitToCelsius = function(t) {
+
+}
+
+const trimTemp = function (t) {
+
+}
+
+const tempForecasts = function() {
+    
+}
+
 console.log(citiesOnly([
     {
       city: 'Los Angeles',

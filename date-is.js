@@ -19,7 +19,7 @@ const isBefore = function(date1, date2) {
 }
 
 const isFuture = function(date) {
-    return isValid(date) && new(date).getTime() > new Date().getTime()
+    return isValid(date) && new Date(date).getTime() > new Date().getTime()
 }
 
 const isPast = function(date) {

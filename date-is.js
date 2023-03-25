@@ -1,6 +1,6 @@
 const isValid = function(date) {
     try {
-        return !isNaN(new Date(date).getTime())
+        return !isNaN(new Date(date).getTime()) && typeof date !== "string"
     } catch {
         return false
     }
@@ -32,3 +32,4 @@ const isPast = function(date) {
 // // console.log(isValid('2013-01-01'))
 // // console.log(Date.now())
 // console.log(isValid(Date.now()))
+// console.log(isValid('2013-01-01'))

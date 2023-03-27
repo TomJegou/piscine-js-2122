@@ -25,12 +25,13 @@ const filter1DistinctVowel = function (t) {
                 v.push(letter);
             }
         })
+        let c = true
         v.map(letter => {
-            if(letter != v[0]) {
-                return false;
+            if(letter.toLowerCase() !== v[0].toLowerCase()) {
+                c = false;
             }
         })
-        return true;
+        return c;
     }
     return t.filter(word => check1DistinctVowels(word));
 }
@@ -50,3 +51,56 @@ const multiFilter = function (t) {
 // console.log(filterShortStateName(["iqofhdsoif", "tom", "alsaka", "pifhdspfdsjfpds"]))
 // console.log(filterStartVowel(["iqofhdsoif", "tom", "alsaka", "pifhdspfdsjfpds"]))
 // console.log(filter5Vowels(["Tom", "Alaska", "California", "West Virginia"]))
+
+// console.log(filter1DistinctVowel([
+//     'Alabama',
+//     'Alaska',
+//     'Arizona',
+//     'Arkansas',
+//     'California',
+//     'Colorado',
+//     'Connecticut',
+//     'Delaware',
+//     'Florida',
+//     'Georgia',
+//     'Hawaii',
+//     'Idaho',
+//     'Illinois',
+//     'Indiana',
+//     'Iowa',
+//     'Kansas',
+//     'Kentucky',
+//     'Louisiana',
+//     'Maine',
+//     'Maryland',
+//     'Massachusetts',
+//     'Michigan',
+//     'Minnesota',
+//     'Mississippi',
+//     'Missouri',
+//     'Montana',
+//     'Nebraska',
+//     'Nevada',
+//     'New Hampshire',
+//     'New Jersey',
+//     'New Mexico',
+//     'New York',
+//     'North Carolina',
+//     'North Dakota',
+//     'Ohio',
+//     'Oklahoma',
+//     'Oregon',
+//     'Pennsylvania',
+//     'Rhode Island',
+//     'South Carolina',
+//     'South Dakota',
+//     'Tennessee',
+//     'Texas',
+//     'Utah',
+//     'Vermont',
+//     'Virginia',
+//     'Washington',
+//     'West Virginia',
+//     'Wisconsin',
+//     'Wyoming',
+//   ]))

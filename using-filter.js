@@ -36,7 +36,15 @@ const filter1DistinctVowel = function (t) {
 }
 
 const multiFilter = function (t) {
-
+    const check1Vowel = function(str) {
+        [...str].map(letter => {
+            if(vowels.includes(letter.toLowerCase())) {
+                return true
+            }
+            return false
+        })
+    }
+    return t.filter(obj => obj.capital.length > 7 && !vowels.includes(obj.name[0].toLowerCase()) && check1Vowel(obj.tag) && obj.region === "South")
 }
 
 // console.log(filterShortStateName(["iqofhdsoif", "tom", "alsaka", "pifhdspfdsjfpds"]))

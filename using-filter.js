@@ -39,6 +39,6 @@ const multiFilter = function (t) {
 
 }
 
-console.log(filterShortStateName(["iqofhdsoif", "tom", "alsaka", "pifhdspfdsjfpds"]))
+// console.log(filterShortStateName(["iqofhdsoif", "tom", "alsaka", "pifhdspfdsjfpds"]))
 // console.log(filterStartVowel(["iqofhdsoif", "tom", "alsaka", "pifhdspfdsjfpds"]))
 // console.log(filter5Vowels(["Tom", "Alaska", "California", "West Virginia"]))

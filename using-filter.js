@@ -14,7 +14,7 @@ const filter5Vowels = function (t) {
         })
         return v.length > 4;
     }
-    return result = t.filter(word => chekc5Vowels(word));
+    return t.filter(word => chekc5Vowels(word));
 }
 
 const filter1DistinctVowel = function (t) {
@@ -32,7 +32,7 @@ const filter1DistinctVowel = function (t) {
         })
         return true;
     }
-    return result = t.filter(word => check1DistinctVowels(word));
+    return t.filter(word => check1DistinctVowels(word));
 }
 
 const multiFilter = function (t) {

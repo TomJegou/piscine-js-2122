@@ -1,3 +1,5 @@
 const forEach = (t, func) => {
-    t.map((element) => func(element))
+    for(let i = 0; i < t.length; i++) {
+        func(i)
+    }
 }

@@ -2,7 +2,7 @@ const adder = (t, initiator = 0) => t.reduce((accumulator, currentValue) => accu
 
 const sumOrMul = (t, initiator = 0) => t.reduce((accumulator, currentValue) => currentValue % 2 == 0 ? accumulator * currentValue : accumulator + currentValue, initiator);
 
-const funcExec = (t, param) => t.reduce(function(accumulator, currentValue){currentValue(accumulator, param)});
+const funcExec = (t, param) => t.reduce((accumulator, currentValue)=>{currentValue(accumulator, param)});
 
 // console.log(adder([1, 2, 3, 4]))
 // console.log(adder([9, 24, 7, 11, 3], 10))

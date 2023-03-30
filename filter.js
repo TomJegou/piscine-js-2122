@@ -10,5 +10,7 @@ const reject = (t, func) => {
     return result
 }
 
-// console.log(filter([0, 1, 2, 3, 4, 5], (elem) => elem % 2 === 0))
+const partition = (t, func) => {
+    return [filter(t,func), reject(t,func)]
+} 
 

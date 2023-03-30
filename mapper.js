@@ -13,4 +13,4 @@ const flatMap = function(t, f) {
     return result
 }
 
-console.log(flatMap([1, 2, 3], (n) => [n, n]))
+// console.log(flatMap([1, 2, 3], (n) => [n, n]))

@@ -9,13 +9,7 @@ const map = function(t, f) {
 const flatMap = function(t, f) {
     const v = map(t, f)
     const result = []
-    for(let i = 0; i < v.length; i++) {
-        if(Array.isArray(v[i])) {
-            v[i].forEach((elem) => result.push(elem))
-        } else {
-            result.push(v[i])
-        }
-    }
+    v.forEach((elem) => Array.isArray(elem) ? elem.forEach((e) => result.push(e)): result.push(elem))
     return result
 }
 
